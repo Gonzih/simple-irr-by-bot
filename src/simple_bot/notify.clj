@@ -1,5 +1,6 @@
 (ns simple-bot.notify
-  (:use [clojure.pprint])
+  (:use [clojure.pprint]
+        [clojure.tools.logging :only (info error)])
   (:import org.apache.commons.mail.HtmlEmail))
 
 (defn mailer [body]
@@ -35,5 +36,5 @@
   (mailer (format-body i)))
 
 (defn items [is]
-  (println (str "Sending emails for " (count is) " items"))
+  (info "Sending emails for " (count is) " items")
   (doall (map item is)))
