@@ -1,6 +1,5 @@
 (ns simple-bot.notify
-  (:use [clojure.pprint]
-        [mmemail.core])
+  (:use [clojure.pprint])
   (:import org.apache.commons.mail.HtmlEmail))
 
 (defn mailer [body]
