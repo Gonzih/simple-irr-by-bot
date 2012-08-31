@@ -35,4 +35,5 @@
   (mailer (format-body i)))
 
 (defn items [is]
+  (println (str "Sending emails for " (count is) " items"))
   (doall (map item is)))
