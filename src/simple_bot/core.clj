@@ -1,8 +1,12 @@
 (ns simple-bot.core
+  (:use     [clojure.tools.logging :only (info error)])
   (:require [simple-bot.memoization :as memo]))
+
+(def sleep (* 1000 60 10))
 
 (defn -main [& args]
   (loop []
     (memo/check-for-new)
-    (Thread/sleep (* 1000 60 10))
+    (info "Waiting...")
+    (Thread/sleep sleep)
     (recur)))
