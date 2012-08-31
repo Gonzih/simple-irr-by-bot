@@ -1,10 +1,10 @@
 # irr_by_notify
 
-A Clojure library designed to ... well, that part is up to you.
+A Simple Clojure bot for irr.by ads.
 
 ## Usage
 
-FIXME
+lein run
 
 ## License
 
