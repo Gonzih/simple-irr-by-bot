@@ -3,6 +3,6 @@
 
 (defn -main [& args]
   (loop []
-    (Thread/sleep (* 1000 60 10))
     (memo/check-for-new)
+    (Thread/sleep (* 1000 60 10))
     (recur)))
