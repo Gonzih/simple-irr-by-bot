@@ -2,4 +2,7 @@
   (:require [simple-bot.memoization :as memo]))
 
 (defn -main [& args]
-  (memo/check-for-new))
+  (loop
+    (Threed/sleep (* 1000 60 10))
+    (memo/check-for-new)
+    (recur)))
