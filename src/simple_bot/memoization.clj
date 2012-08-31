@@ -21,7 +21,7 @@
   (if (nil? @last-item)
     (let [item (first (fetch/results))]
       (update-last item)
-      (notify/item item))
+      (notify/items [item]))
     (let [data (fetch/results)
           new-items (get-new data)
           new-item (first new-items)]
