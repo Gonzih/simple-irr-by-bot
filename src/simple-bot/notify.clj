@@ -11,7 +11,7 @@
         (.setTLS true)
         (.addTo "gonzih@gmail.com")
         (.setFrom "bot@gonzih.org" "gnzh's bot")
-        (.setSubject "New post on irr.by")
+        (.setSubject "New ad on irr.by")
         (.setCharset "UTF-8")
         (.setHtmlMsg body)
         (.setAuthentication "gonzih@gmail.com" (get (System/getenv) "GMAIL_PASS"))
