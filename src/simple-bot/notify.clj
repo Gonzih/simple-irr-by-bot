@@ -1,4 +1,4 @@
-(ns irr-by-notify.notify
+(ns simple-bot.notify
   (:use [clojure.pprint]
         [mmemail.core])
   (:import org.apache.commons.mail.HtmlEmail))

@@ -1,6 +1,6 @@
-(ns irr-by-notify.memoization
-  (:require [irr-by-notify.fetch :as fetch]
-            [irr-by-notify.notify :as notify]))
+(ns simple-bot.memoization
+  (:require [simple-bot.fetch :as fetch]
+            [simple-bot.notify :as notify]))
 
 (def last-item (atom nil))
 

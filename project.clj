@@ -7,4 +7,4 @@
                  [enlive "1.0.1"]
                  [digest "1.3.0"]
                  [org.apache.commons/commons-email "1.2"]]
-  :main irr-by-notify.core)
+  :main simple-bot.core)

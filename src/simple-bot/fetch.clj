@@ -1,4 +1,4 @@
-(ns irr-by-notify.fetch
+(ns simple-bot.fetch
   (:require [net.cgrand.enlive-html :as html]
             [digest]))
 

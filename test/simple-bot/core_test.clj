@@ -1,4 +1,4 @@
-(ns irr-by-notify.core-test
+(ns simple-bot.core-test
   (:use clojure.test
         irr_by_notify.core))
 
