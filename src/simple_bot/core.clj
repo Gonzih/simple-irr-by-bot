@@ -2,7 +2,7 @@
   (:use     [clojure.tools.logging :only (info error)])
   (:require [simple-bot.memoization :as memo]))
 
-(def sleep (* 1000 60 10))
+(def sleep (* 1000 60 60))
 
 (defn -main [& args]
   (loop []
