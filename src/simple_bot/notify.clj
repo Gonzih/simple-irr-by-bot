@@ -30,11 +30,13 @@
     "<br/>"
     "Price: " price
     "<br/>"
-    "Location: " location))
+    "Location: " location
+    "<br/>"
+    "<br/>"))
 
 (defn item [i]
   (mailer (format-body i)))
 
 (defn items [is]
   (info "Sending emails for " (count is) " items")
-  (doall (map item is)))
+  (mailer (apply str (map format-body is))))
