@@ -34,9 +34,6 @@
     "<br/>"
     "<br/>"))
 
-(defn item [i]
-  (mailer (format-body i)))
-
 (defn items [is]
   (info "Sending emails for " (count is) " items")
   (mailer (apply str (map format-body is))))
