@@ -10,7 +10,9 @@
     (try
       (memo/check-for-new)
       (catch UnknownHostException e
-        (info "Catched UnknownHostException for" (.getMessage e))))
+        (info "Catched UnknownHostException " (.getMessage e)))
+      (catch java.net.ConnectException e
+        (info "Catched CennectException " (.getMessage e))))
     (info "Waiting...")
     (Thread/sleep sleep)
     (recur)))
