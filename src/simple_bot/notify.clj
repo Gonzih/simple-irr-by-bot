@@ -3,8 +3,9 @@
         [clojure.tools.logging :only (info error)])
   (:import org.apache.commons.mail.HtmlEmail))
 
-(defn mailer [body]
-  (doto (HtmlEmail.)
+
+(defn setup-and-send-emal [^HtmlEmail mail body]
+  (doto mail
         (.setHostName "smtp.gmail.com")
         (.setSslSmtpPort "465")
         (.setSSL true)
@@ -17,6 +18,8 @@
         (.setAuthentication "gonzih@gmail.com" (get (System/getenv) "GMAIL_PASS"))
         (.send)))
 
+(defn mailer [body]
+  (setup-and-send-email (HtmlEmail.) body))
 
 (defn format-body [{:keys [image link title location text price]}]
   (str
