@@ -4,7 +4,7 @@
   (:import org.apache.commons.mail.HtmlEmail))
 
 
-(defn setup-and-send-emal [^HtmlEmail mail body]
+(defn setup-and-send-email [^HtmlEmail mail body]
   (doto mail
         (.setHostName "smtp.gmail.com")
         (.setSslSmtpPort "465")
