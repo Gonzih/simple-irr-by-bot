@@ -3,7 +3,7 @@
         [clojure.tools.logging :only (info error)])
   (:import org.apache.commons.mail.HtmlEmail))
 
-(def target-emails []
+(defn target-emails []
   "Emails should be in EMAILS env var, like 'one@email.com;second@email.com'"
   (-> (System/getenv) (get "EMAILS") (clojure.string/split #";")))
 
